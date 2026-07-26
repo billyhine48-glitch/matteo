@@ -1,0 +1,17 @@
+{
+  "name": "nova-chatbot-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ai-engine-v4.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}

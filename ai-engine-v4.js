@@ -1294,7 +1294,7 @@
       m = t.match(/(-?\d+(?:\.\d+)?)\s*(km|kilometers?|mi|miles?|m|meters?|ft|feet)\s*(?:to|in)\s*(km|kilometers?|mi|miles?|m|meters?|ft|feet)/);
       if (m) {
         const v = parseFloat(m[1]);
-        const unit = (u) => /^km/.test(u) ? "km" : /^mi/.test(u) ? "mi" : /^ft/.test(u) ? "ft" : "m";
+        const unit = (u) => /^km|^kilometers?/.test(u) ? "km" : /^mi|^miles?/.test(u) ? "mi" : /^ft|^feet/.test(u) ? "ft" : "m";
         const toMeters = { km: 1000, mi: 1609.34, m: 1, ft: 0.3048 };
         const from = unit(m[2]), to = unit(m[3]);
         const r = (v * toMeters[from]) / toMeters[to];
@@ -1304,7 +1304,7 @@
       m = t.match(/(-?\d+(?:\.\d+)?)\s*(kg|kilograms?|lb|pounds?|g|grams?)\s*(?:to|in)\s*(kg|kilograms?|lb|pounds?|g|grams?)/);
       if (m) {
         const v = parseFloat(m[1]);
-        const unit = (u) => /^kg/.test(u) ? "kg" : /^lb|^pounds?/.test(u) ? "lb" : "g";
+        const unit = (u) => /^kg|^kilograms?/.test(u) ? "kg" : /^lb|^pounds?/.test(u) ? "lb" : "g";
         const toGrams = { kg: 1000, lb: 453.592, g: 1 };
         const from = unit(m[2]), to = unit(m[3]);
         const r = (v * toGrams[from]) / toGrams[to];

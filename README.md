@@ -31,6 +31,9 @@ npm test
 
 ## Changelog
 
+### v4.1.1 (Aug 5, 2026)
+- Fixed `package.json` test script: replaced default `npm init` error with `jest` so `npm test` actually runs the 21 unit conversion tests
+
 ### v4.1 (Aug 4, 2026)
 - Fixed unit conversion for full unit names: "kilometers" and "kilograms" were silently treated as "meters" and "grams", producing results 1000x too small ([PR #1](https://github.com/billyhine48-glitch/matteo/pull/1))
 - Added "miles" and "feet" full name detection to length converter for consistency

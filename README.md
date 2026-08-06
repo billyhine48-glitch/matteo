@@ -19,6 +19,7 @@ Nova AI Engine v4 — a homemade, client-side AI chatbot with no external API de
 - `Nova-Chatbot-v4-updated-engine.html` — the chatbot UI (self-contained HTML)
 - `test/unit-conversion.test.js` — Jest tests for unit conversion
 - `package.json` — Node.js project config with Jest
+- `.gitignore` — ignores node_modules, OS files, editor configs, env files
 
 ## Tests
 
@@ -29,7 +30,13 @@ npm test
 
 21 tests covering unit detection and conversion for both length and weight. All passing.
 
+> **Note:** [PR #3](https://github.com/billyhine48-glitch/matteo/pull/3) expands test coverage to 77 tests (temperature, NLU intent detection, conversation memory). Currently open for review.
+
 ## Changelog
+
+### v4.1.2 (Aug 6, 2026)
+- Added `.gitignore` for Node.js project (node_modules, OS files, editor configs, env files)
+- Opened [issue #2](https://github.com/billyhine48-glitch/matteo/issues/2): v4.2 roadmap (server-side API, CI/CD, expanded tests, GitHub Pages, repo metadata cleanup)
 
 ### v4.1.1 (Aug 5, 2026)
 - Fixed `package.json` test script: replaced default `npm init` error with `jest` so `npm test` actually runs the 21 unit conversion tests

@@ -1,6 +1,6 @@
 # Nova Chatbot
 
-Nova AI Engine v4 — a homemade, client-side AI chatbot with no external API dependencies.
+Nova AI Engine v4: a homemade, client-side AI chatbot with no external API dependencies.
 
 **Live deployment:** [nova-ai.dls.so](https://nova-ai.dls.so)
 
@@ -11,7 +11,7 @@ Nova AI Engine v4 — a homemade, client-side AI chatbot with no external API de
 - Conversation memory with context tracking
 - Long-term memory via localStorage
 - Unit conversion, temperature conversion, time/date, dice, and more
-- DuckDuckGo + Wikipedia search integration for factual questions
+- DuckDuckGo + Wikipedia search integration for factual queries
 
 ## Project Structure
 
@@ -23,6 +23,7 @@ Nova AI Engine v4 — a homemade, client-side AI chatbot with no external API de
 - `test/conversation-memory.test.js` — Jest tests for conversation memory (10 tests)
 - `package.json` — Node.js project config with Jest
 - `.gitignore` — ignores node_modules, OS files, editor configs, env files
+- `LICENSE` — MIT License
 
 ## Tests
 
@@ -33,11 +34,16 @@ npm test
 
 77 tests across 4 suites, all passing:
 - Unit conversion (21 tests): length and weight detection + accuracy
-- Temperature conversion (10 tests): C↔F, decimals, crossover point, edge cases
+- Temperature conversion (10 tests): C to F, decimals, crossover point, edge cases
 - NLU intent detection (35 tests): greeting, identity, memory, tool, code, writing, knowledge, social, planning, reasoning, upgrade, fallback
 - Conversation memory (10 tests): initialization, turn recording, entity accumulation, 40-turn rolling window, multi-turn context
 
 ## Changelog
+
+### v4.2.1 (Aug 7, 2026)
+- Added MIT LICENSE file (roadmap item #5)
+- Updated package.json: proper name, description, keywords, author, license fields
+- Cleaned up stale branches from merged PRs #1 and #3
 
 ### v4.2 (Aug 7, 2026)
 - Merged [PR #3](https://github.com/billyhine48-glitch/matteo/pull/3): expanded test coverage from 21 to 77 tests across 4 suites (temperature, NLU intent detection, conversation memory)
@@ -62,4 +68,4 @@ npm test
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE) file.

@@ -17,7 +17,10 @@ Nova AI Engine v4 — a homemade, client-side AI chatbot with no external API de
 
 - `ai-engine-v4.js` — the core AI engine (1881 lines)
 - `Nova-Chatbot-v4-updated-engine.html` — the chatbot UI (self-contained HTML)
-- `test/unit-conversion.test.js` — Jest tests for unit conversion
+- `test/unit-conversion.test.js` — Jest tests for unit conversion (21 tests)
+- `test/temperature.test.js` — Jest tests for temperature conversion (10 tests)
+- `test/nlu-intent.test.js` — Jest tests for NLU intent detection (35 tests)
+- `test/conversation-memory.test.js` — Jest tests for conversation memory (10 tests)
 - `package.json` — Node.js project config with Jest
 - `.gitignore` — ignores node_modules, OS files, editor configs, env files
 
@@ -28,11 +31,17 @@ npm install
 npm test
 ```
 
-21 tests covering unit detection and conversion for both length and weight. All passing.
-
-> **Note:** [PR #3](https://github.com/billyhine48-glitch/matteo/pull/3) expands test coverage to 77 tests (temperature, NLU intent detection, conversation memory). Currently open for review.
+77 tests across 4 suites, all passing:
+- Unit conversion (21 tests): length and weight detection + accuracy
+- Temperature conversion (10 tests): C↔F, decimals, crossover point, edge cases
+- NLU intent detection (35 tests): greeting, identity, memory, tool, code, writing, knowledge, social, planning, reasoning, upgrade, fallback
+- Conversation memory (10 tests): initialization, turn recording, entity accumulation, 40-turn rolling window, multi-turn context
 
 ## Changelog
+
+### v4.2 (Aug 7, 2026)
+- Merged [PR #3](https://github.com/billyhine48-glitch/matteo/pull/3): expanded test coverage from 21 to 77 tests across 4 suites (temperature, NLU intent detection, conversation memory)
+- Updated [issue #2](https://github.com/billyhine48-glitch/matteo/issues/2) roadmap: item 3 (expand test coverage) complete
 
 ### v4.1.2 (Aug 6, 2026)
 - Added `.gitignore` for Node.js project (node_modules, OS files, editor configs, env files)

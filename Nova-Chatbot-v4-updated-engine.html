@@ -3953,7 +3953,7 @@ input, textarea { font-family: inherit; }
     const toast = document.createElement("div");
     toast.className = "upgrade-banner";
     toast.style.borderColor = type === "success" ? "var(--success)" : "var(--danger)";
-    toast.innerHTML = `<div class="ub-title" style="color:var(--${type === "success" ? "success" : "danger"})">${title}</div><div class="ub-body">${body}</div>`;
+    toast.innerHTML = `<div class="ub-title" style="color:var(--${type === "success" ? "success" : "danger"})">${escapeHtml(title)}</div><div class="ub-body">${escapeHtml(body)}</div>`;
     const panel = document.getElementById("pane-upgrades");
     panel.insertBefore(toast, panel.firstChild);
     setTimeout(() => toast.remove(), 4000);

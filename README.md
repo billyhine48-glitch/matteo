@@ -21,6 +21,7 @@ Nova AI Engine v4: a homemade, client-side AI chatbot with no external API depen
 - `test/temperature.test.js` — Jest tests for temperature conversion (10 tests)
 - `test/nlu-intent.test.js` — Jest tests for NLU intent detection (35 tests)
 - `test/conversation-memory.test.js` — Jest tests for conversation memory (10 tests)
+- `test/safe-math.test.js` — Jest tests for the safe math evaluator (18 tests)
 - `package.json` — Node.js project config with Jest
 - `.gitignore` — ignores node_modules, OS files, editor configs, env files
 - `LICENSE` — MIT License
@@ -32,13 +33,18 @@ npm install
 npm test
 ```
 
-77 tests across 4 suites, all passing:
+95 tests across 5 suites, all passing:
 - Unit conversion (21 tests): length and weight detection + accuracy
 - Temperature conversion (10 tests): C to F, decimals, crossover point, edge cases
 - NLU intent detection (35 tests): greeting, identity, memory, tool, code, writing, knowledge, social, planning, reasoning, upgrade, fallback
 - Conversation memory (10 tests): initialization, turn recording, entity accumulation, 40-turn rolling window, multi-turn context
+- Safe math evaluator (18 tests): precedence, parentheses, power operator, unary minus, Math functions, constants, division by zero, invalid input
 
 ## Changelog
+
+### v4.2.2 (Aug 9, 2026)
+- Added safeMath edge case tests: operator precedence, parentheses, power operator, unary minus, Math functions (sqrt/sin/cos/abs), Math constants (PI/E), division by zero, invalid input rejection
+- Test count expanded from 77 to 95 across 5 suites
 
 ### v4.2.1 (Aug 7, 2026)
 - Added MIT LICENSE file (roadmap item #5)
@@ -51,7 +57,7 @@ npm test
 
 ### v4.1.2 (Aug 6, 2026)
 - Added `.gitignore` for Node.js project (node_modules, OS files, editor configs, env files)
-- Opened [issue #2](https://github.com/billyhine48-glitch/matteo/issues/2): v4.2 roadmap (server-side API, CI/CD, expanded tests, GitHub Pages, repo metadata cleanup)
+- Opened [issue #2](https://github.com/billyhine48-glitch/matteo/issues/2): v4.2 roadmap (server-side API, CI/CD, expanded test coverage, GitHub Pages, repo metadata cleanup)
 
 ### v4.1.1 (Aug 5, 2026)
 - Fixed `package.json` test script: replaced default `npm init` error with `jest` so `npm test` actually runs the 21 unit conversion tests

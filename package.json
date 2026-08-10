@@ -1,6 +1,6 @@
 {
   "name": "nova-chatbot",
-  "version": "4.2.0",
+  "version": "4.2.3",
   "description": "Nova AI Engine v4: a homemade, client-side AI chatbot with no external API dependencies.",
   "main": "ai-engine-v4.js",
   "directories": {

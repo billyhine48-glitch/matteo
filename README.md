@@ -21,7 +21,7 @@ Nova AI Engine v4: a homemade, client-side AI chatbot with no external API depen
 - `test/temperature.test.js` — Jest tests for temperature conversion (10 tests)
 - `test/nlu-intent.test.js` — Jest tests for NLU intent detection (35 tests)
 - `test/conversation-memory.test.js` — Jest tests for conversation memory (10 tests)
-- `test/safe-math.test.js` — Jest tests for the safe math evaluator (18 tests)
+- `test/safe-math.test.js` — Jest tests for the safe math evaluator (22 tests)
 - `package.json` — Node.js project config with Jest
 - `.gitignore` — ignores node_modules, OS files, editor configs, env files
 - `LICENSE` — MIT License
@@ -33,14 +33,19 @@ npm install
 npm test
 ```
 
-95 tests across 5 suites, all passing:
+99 tests across 5 suites, all passing:
 - Unit conversion (21 tests): length and weight detection + accuracy
 - Temperature conversion (10 tests): C to F, decimals, crossover point, edge cases
 - NLU intent detection (35 tests): greeting, identity, memory, tool, code, writing, knowledge, social, planning, reasoning, upgrade, fallback
 - Conversation memory (10 tests): initialization, turn recording, entity accumulation, 40-turn rolling window, multi-turn context
-- Safe math evaluator (18 tests): precedence, parentheses, power operator, unary minus, Math functions, constants, division by zero, invalid input
+- Safe math evaluator (22 tests): precedence, parentheses, power operator, unary minus, Math functions, constants, division by zero, invalid input
 
 ## Changelog
+
+### v4.2.3 (Aug 10, 2026)
+- Fixed engine version string: 3.0.0 → 4.2.2 (was stale since v3)
+- Corrected test count in README: 95 → 99 (safe-math suite has 22 tests, not 18)
+- Updated repo description and topics on GitHub
 
 ### v4.2.2 (Aug 9, 2026)
 - Added safeMath edge case tests: operator precedence, parentheses, power operator, unary minus, Math functions (sqrt/sin/cos/abs), Math constants (PI/E), division by zero, invalid input rejection

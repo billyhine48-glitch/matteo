@@ -1874,7 +1874,7 @@
     // search the web (this is what makes self-upgrades genuinely useful).
     _capabilities: capabilities,
     webSearch,
-    version: "3.0.0",
+    version: "4.2.2",
   };
 
   global.NovaAI = NovaAI;
